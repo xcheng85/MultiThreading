@@ -8,5 +8,6 @@ find_package(Boost 1.68.0 COMPONENTS thread REQUIRED)
 if(Boost_FOUND)
   add_subdirectory(boostThreads)
   add_subdirectory(boostThreadsMutex)
+  add_subdirectory(cppThreads)
 endif()
 

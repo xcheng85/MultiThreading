@@ -10,17 +10,18 @@
         {
             "label": "cmake",
             "type": "shell",
-            "command": "cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_FLAGS=-g2 -DCMAKE_CXX_FLAGS=-g2 .." 
+            "command": "cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=. -DCMAKE_C_FLAGS=-g2 -DCMAKE_CXX_FLAGS=-g2 ..",
+            "problemMatcher": []
         },
         {
             "label": "build",
             "type": "shell",
             "command": "make -j 8",
-            "group":{
+            "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher":"$gcc"     
+            "problemMatcher": "$gcc"
         }
     ]
 }

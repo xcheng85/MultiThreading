@@ -1,0 +1,23 @@
+project(cpp11_threads)
+set(CMAKE_CXX_STANDARD 11)
+set(SOURCE ./src/threads.cpp)
+add_executable(${PROJECT_NAME} ${SOURCE})
+install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ../bin)
+
+project(cpp11_recursive_lock)
+set(CMAKE_CXX_STANDARD 11)
+set(SOURCE ./src/recursive_lock.cpp)
+add_executable(${PROJECT_NAME} ${SOURCE})
+install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ../bin)
+
+project(cpp11_conditional_var)
+set(CMAKE_CXX_STANDARD 11)
+set(SOURCE ./src/conditional_var.cpp)
+add_executable(${PROJECT_NAME} ${SOURCE})
+install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ../bin)
+
+project(cpp11_threadsafe_queue)
+set(CMAKE_CXX_STANDARD 11)
+set(SOURCE ./src/threadsafe_queue.h ./src/test_threadsafe_queue.cpp)
+add_executable(${PROJECT_NAME} ${SOURCE})
+install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ../bin)

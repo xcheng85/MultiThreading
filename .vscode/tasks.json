@@ -22,6 +22,12 @@
                 "isDefault": true
             },
             "problemMatcher": "$gcc"
+        },
+        {
+            "label": "install",
+            "type": "shell",
+            "command": "make install",
+            "problemMatcher": []
         }
     ]
 }

@@ -9,5 +9,6 @@ if(Boost_FOUND)
   add_subdirectory(boostThreads)
   add_subdirectory(boostThreadsMutex)
   add_subdirectory(cppThreads)
+  add_subdirectory(cpp11Features)
 endif()
 

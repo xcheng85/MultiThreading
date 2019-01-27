@@ -26,8 +26,8 @@ int main()
 
     std::thread t1(accumulator_function2, std::ref(v), std::ref(acm1), 0, v.size() / 2);
     std::thread t2(accumulator_function2, std::ref(v), std::ref(acm2), v.size() / 2, v.size());
-    t1.join();
-    t2.join();
+    t1.join(); // main threads waits for t1
+    t2.join(); // main threads waits for t2
 
     std::cout << "acm1: " << acm1 << endl;
     std::cout << "acm2: " << acm2 << endl;

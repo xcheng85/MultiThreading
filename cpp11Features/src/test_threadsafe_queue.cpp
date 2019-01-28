@@ -5,7 +5,7 @@
 
 void consumer(int id, ThreadSafeQueue<int>& q){
     for(int i = 0; i < 5; ++i){
-        int value = q.Popup();
+        int value = q.Pop();
         std::cout << "Consumer " << id << " fetched " << value << std::endl;
         std::this_thread::sleep_for(std::chrono::milliseconds(250));
     }
@@ -13,7 +13,7 @@ void consumer(int id, ThreadSafeQueue<int>& q){
 
 void producer(int id, ThreadSafeQueue<int>& q){
     for(int i = 0; i < 5; ++i){
-        q.Insert(id);
+        q.Push(i);
         std::cout << "Produced " << id << " produced " << i << std::endl;
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
